@@ -26,7 +26,7 @@ Feature: Carvana Main Functionality
     When user clicks on "VIN" button
     And user enters vin number as "00000000000000000"
     And user clicks on "GET MY OFFER" button
-    Then user should see "We couldn’t find that VIN. Please check your entry and try again." text
+    Then user should see "We couldn't find that VIN. Please check your entry and try again." text
 
 
   Scenario: Validate AUTO LOAN CALCULATOR under FINANCING menu item

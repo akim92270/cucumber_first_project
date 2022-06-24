@@ -19,21 +19,16 @@ public class CarvanaAutoLoanCalculatorPage {
     @FindBy(css = "input[name='vehiclePrice']")
     public WebElement amountOfVehiclePriceInputBox;
 
-    @FindBy(id = "creditBlock")
+    @FindBy(css = "select[id='creditBlock']")
     public WebElement creditScoreOption;
 
-    @FindBy(css = "select[name='loanTerm'] option")
-    public List<WebElement> amountOfLoanTermOption;
+    @FindBy(css = "select[name='loanTerm']")
+    public WebElement amountOfLoanTermOption;
 
     @FindBy(css = "input[name='downPayment']")
     public WebElement downPaymentInputBox;
 
-    public void clickOnLoanTermOptions(String loanText) {
-        for (WebElement text : amountOfLoanTermOption) {
-            if (text.getText().equals(loanText)) {
-                text.click();
-                break;
-            }
-        }
-    }
+    @FindBy(css = ".loan-calculator-display-value")
+    public WebElement monthlyDisplayValue;
+
 }
