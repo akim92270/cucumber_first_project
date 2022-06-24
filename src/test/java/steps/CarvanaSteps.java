@@ -13,6 +13,7 @@ import pages.*;
 import utilities.Driver;
 import utilities.DropdownHandler;
 import utilities.ExpectedTexts;
+import utilities.Waiter;
 
 public class CarvanaSteps {
 
@@ -40,12 +41,19 @@ public class CarvanaSteps {
     public void userClicksOnMenuItem(String menuNavigation) {
         switch (menuNavigation) {
             case "CAR FINDER":
+                Waiter.waitForVisibilityOfElement(driver, carvanaHomepage.carFinderLink,2);
                 Assert.assertTrue(carvanaHomepage.carFinderLink.isDisplayed());
                 Assert.assertEquals(menuNavigation, carvanaHomepage.carFinderLink.getText());
                 break;
             case "SELL/TRADE":
+                Waiter.waitForVisibilityOfElement(driver, carvanaHomepage.sellTradeLink,2);
                 Assert.assertTrue(carvanaHomepage.sellTradeLink.isDisplayed());
                 Assert.assertEquals(menuNavigation, carvanaHomepage.sellTradeLink.getText());
+                break;
+            case "AUTO LOAN CALCULATOR":
+                Waiter.waitForVisibilityOfElement(driver, carvanaHomepage.autoLoanCalculatorLink,2);
+                Assert.assertTrue(carvanaHomepage.autoLoanCalculatorLink.isDisplayed());
+                Assert.assertEquals(menuNavigation, carvanaHomepage.autoLoanCalculatorLink.getText());
                 break;
             default:
                 throw new NotFoundException("The menu item is not defined properly");

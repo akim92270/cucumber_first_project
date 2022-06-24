@@ -27,6 +27,8 @@ public class BaseSteps {
         switch(url){
             case "https://www.carvana.com/help-me-search/":
                 Assert.assertEquals(url,driver.getCurrentUrl());
+            case "https://www.carvana.com/help-me-search/qa":
+                Assert.assertEquals(url,driver.getCurrentUrl());
             case "https://www.carvana.com/sell-my-car":
                 Assert.assertEquals(url,driver.getCurrentUrl());
                 break;
