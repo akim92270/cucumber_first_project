@@ -13,7 +13,7 @@ public class CarvanaHomepage {
     @FindBy(css = "a[data-cv-test='headerCarFinderLink']")
     public WebElement carFinderLink;
 
-    @FindBy(css = "a[data-cv-test='headerSearchLink']")
+    @FindBy(css = "a[data-cv-test='headerTradesLink']")
     public WebElement sellTradeLink;
 
     @FindBy(css = ".kAQuLc")

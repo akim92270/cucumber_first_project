@@ -29,6 +29,6 @@ public class CarvanaAutoLoanCalculatorPage {
     public WebElement downPaymentInputBox;
 
     @FindBy(css = ".loan-calculator-display-value")
-    public WebElement monthlyDisplayValue;
+    public static WebElement monthlyDisplayValue;
 
 }
